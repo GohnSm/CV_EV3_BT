@@ -207,8 +207,7 @@ if hmm == 'n':
                 roImg=frame[y:y+h,x:x+w]
                 roImg=cv.resize(roImg,(64,64))
                 #cv.imshow('before',roImg)
-                roImg=cv.inRange(roImg,(bmin,gmin,rmin),(bmax,gmax,rmax))
-                roImg2=roImg.copy()
+                #roImg=cv.inRange(roImg,(bmin,gmin,rmin),(bmax,gmax,rmax))
                 #cv.imshow('detect',roImg)
                 #cv.imshow('n',n1)
                 #cv.imshow('n2',n7)
