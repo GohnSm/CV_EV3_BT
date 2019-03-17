@@ -1,4 +1,5 @@
-import cv2 as cv  
+import cv2 as cv
+import numpy
 #import RPIO
 #import serial
 import time
@@ -210,6 +211,8 @@ if hmm == 'n':
                 #cv.imshow('detect',roImg)
                 #cv.imshow('n',n1)
                 #cv.imshow('n2',n7)
+                roImg=img.astype(np.unit8)
+
             for o in range(1,10):
                 template=cv.imread(str(o)+'.png')
                 resu=cv.matchTemplate(roImg,template,cv.TM_CCOEFF_NORMED)
