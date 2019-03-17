@@ -195,7 +195,7 @@ if hmm == 'n':
             n9v=0
             n10v=0
             n11v=0
-            n12v=0
+            n12v=0 
             
             if len(contours) != 0:
                 contours=sorted(contours,key=cv.contourArea,reverse=True)
