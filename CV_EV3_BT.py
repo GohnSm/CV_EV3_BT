@@ -212,7 +212,7 @@ if hmm == 'n':
                 #cv.imshow('n2',n7)
             for o in range(10):
                 template=cv2.imread(o+'.png')
-                resu=cv2.matchTemplate(cropped,template,cv2.CCOEFF_NORMED)
+                resu=cv2.matchTemplate(roImg,template,cv2.CCOEFF_NORMED)
                 minv,maxv,minl,maxl=cv2.minMaxLoc(result)
                 if maxv>0.9:
                     print('!!!    '+cn+' '+o)
