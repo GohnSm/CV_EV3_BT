@@ -211,7 +211,7 @@ if hmm == 'n':
                 #cv.imshow('detect',roImg)
                 #cv.imshow('n',n1)
                 #cv.imshow('n2',n7)
-                roImg=img.astype(np.unit8)
+                roImg=np.unit8(roImg)
 
             for o in range(1,10):
                 template=cv.imread(str(o)+'.png')
