@@ -204,7 +204,7 @@ if hmm == 'n':
                 (x,y,w,h)=cv.boundingRect(contours[0])
                 cv.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
                 #cv.imshow('rect',frame)
-                roImg=frame[y:y+h,x:x+w]
+                roImg=framec[y:y+h,x:x+w]
                 roImg=cv.resize(roImg,(64,64))
                 #cv.imshow('before',roImg)
                 #roImg=cv.inRange(roImg,(bmin,gmin,rmin),(bmax,gmax,rmax))
@@ -217,7 +217,7 @@ if hmm == 'n':
                         template=cv.cvtColor(cv.imread(str(o)+'.png'),cv.COLOR_BGR2GRAY)
                         resu=cv.matchTemplate(roImg,template,cv.TM_CCOEFF_NORMED)
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
-                        if maxv>0.8:
+                        if maxv>0.7:
                             print('!!!    '+cn+' ',int(o))
             break
             if cv.waitKey(1)== ord('q'):
