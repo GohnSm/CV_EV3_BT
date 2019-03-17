@@ -208,10 +208,11 @@ if hmm == 'n':
                 roImg=cv.resize(roImg,(64,64))
                 #cv.imshow('before',roImg)
                 roImg=cv.inRange(roImg,(bmin,gmin,rmin),(bmax,gmax,rmax))
+                roImg2=roImg.copy()
                 #cv.imshow('detect',roImg)
                 #cv.imshow('n',n1)
                 #cv.imshow('n2',n7)
-                roImg=roImg.astype(np.unit8)
+                roImg2=roImg2.astype(np.unit8)
 
             for o in range(1,10):
                 template=cv.imread(str(o)+'.png')
