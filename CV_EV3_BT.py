@@ -118,7 +118,7 @@ if hmm == 'n':
     gpio2.close
     gpio1=open('/sys/class/gpio/gpio24/value','w')
     gpio1.write('0')
-    gpio1.close
+    gpio1.close 
 
     
     n1=cv.inRange(cv.resize(cv.imread('1.png'),(64,64)),(254,254,254),(255,255,255)) 
