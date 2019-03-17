@@ -212,7 +212,7 @@ if hmm == 'n':
                 #cv.imshow('detect',roImg)
                 #cv.imshow('n',n1)
                 #cv.imshow('n2',n7)
-                roImg=cv.cvtColor(roImg,cv.COLOR_HSV2GRAY)
+                roImg=cv.cvtColor(roImg,cv.COLOR_BGR2GRAY)
                 if roImg.all() !=0:
                     for o in range(1,10):
                         template=cv.imread(str(o)+'.png')
