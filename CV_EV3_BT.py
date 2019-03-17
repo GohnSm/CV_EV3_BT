@@ -217,7 +217,7 @@ if hmm == 'n':
                         template=cv.cvtColor(cv.imread(str(o)+'.png'),cv.COLOR_BGR2GRAY)
                         resu=cv.matchTemplate(roImg,template,cv.TM_CCOEFF_NORMED)
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
-                        if maxv>0.7:
+                        if maxv>0.6:
                             print('!!!    '+cn+' ',int(o))
             break
             if cv.waitKey(1)== ord('q'):
