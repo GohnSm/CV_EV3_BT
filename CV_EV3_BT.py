@@ -212,8 +212,9 @@ if hmm == 'n':
                 #cv.imshow('n',n1)
                 #cv.imshow('n2',n7)
                 roImg=cv.cvtColor(roImg,cv.COLOR_BGR2GRAY)
-                if roImg.all() !=0:
+                if roImg.any() !=0:
                     for o in range(1,10):
+                        print(int(o),' '+cn)
                         template=cv.cvtColor(cv.imread(str(o)+'.png'),cv.COLOR_BGR2GRAY)
                         resu=cv.matchTemplate(roImg,template,cv.TM_CCOEFF_NORMED)
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
