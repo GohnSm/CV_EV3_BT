@@ -213,7 +213,7 @@ if hmm == 'n':
             for o in range(10):
                 template=cv.imread(str(o)+'.png')
                 resu=cv.matchTemplate(roImg,template,cv.CCOEFF_NORMED)
-                minv,maxv,minl,maxl=cv2.minMaxLoc(result)
+                minv,maxv,minl,maxl=cv.minMaxLoc(result)
                 if maxv>0.9:
                     print('!!!    '+cn+' '+o)
             break
