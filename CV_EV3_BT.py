@@ -204,7 +204,7 @@ if hmm == 'n':
                 (x,y,w,h)=cv.boundingRect(contours[0])
                 cv.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
                 #cv.imshow('rect',frame)
-                roImg=framec[y:y+h,x:x+w]
+                roImg=frame[y:y+h,x:x+w]
                 roImg=cv.resize(roImg,(64,64))
                 #cv.imshow('before',roImg)
                 roImg=cv.inRange(roImg,(bmin,gmin,rmin),(bmax,gmax,rmax))
