@@ -217,10 +217,10 @@ if hmm == 'n':
                         template=cv.cvtColor(cv.imread(str(o)+'.png'),cv.COLOR_BGR2GRAY)
                         resu=cv.matchTemplate(roImg,template,cv.TM_CCOEFF)
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
-                        print('!!!    '+cn+' ',int(o))
+                        print(cn+' ',int(o))
                         print(minv,' ',maxv,' ',minl,' ',maxl)
-                        if maxv>0.5:
-                            print('!!!    '+cn+' ',int(o))
+                        if maxv>100000:
+                            print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
             break
             if cv.waitKey(1)== ord('q'):
                 break
