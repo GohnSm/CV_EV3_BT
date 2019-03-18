@@ -223,10 +223,32 @@ if hmm == 'n':
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
                         print(minv,maxv,minl,maxl)
                         print(' ')
-                        #print(cn+' ',int(o))
-                        #print(minv,' ',maxv,' ',minl,' ',maxl)
-                        if (minv>100000) and (minv<150000):
-                            print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==2:
+                            if minv>0.21:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==3:
+                            if (minv>0.24) and (minv<0.27):
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==4:
+                            if minv>0.35:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==5:
+                            if minv>0.9:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==6:
+                            if minv>0.34:
+                                #меньше чем у 8
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==7:
+                            if minv>0.9:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==8:
+                            if minv>0.38:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==9:
+                            if minv>0.34:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+
             break
             if cv.waitKey(1)== ord('q'):
                 break
