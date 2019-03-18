@@ -216,13 +216,16 @@ if hmm == 'n':
                 print(' ')
                 print(cn)
                 if roImg.any() !=0:
-                    for o in range(1,10):
+                    for o in range(1,13):
                         print(o)
                         template=cv.cvtColor(cv.imread(str(o)+'.png'),cv.COLOR_BGR2GRAY)
                         resu=cv.matchTemplate(roImg,template,cv.TM_CCOEFF_NORMED)
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
                         print(minv,maxv,minl,maxl)
                         print(' ')
+                        if o==1:
+                            if minv>0.27:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
                         if o==2:
                             if minv>0.21:
                                 print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
@@ -233,20 +236,29 @@ if hmm == 'n':
                             if minv>0.35:
                                 print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
                         if o==5:
-                            if minv>0.9:
+                            if minv>0.31:
                                 print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
                         if o==6:
                             if minv>0.34:
                                 #<8
                                 print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
                         if o==7:
-                            if minv>0.9:
+                            if minv>0.28:
                                 print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
                         if o==8:
                             if minv>0.38:
                                 print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
                         if o==9:
                             if minv>0.34:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==10:
+                            if minv>0.21:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==11:
+                            if minv>0.21:
+                                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                        if o==12:
+                            if minv>0.21:
                                 print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
 
             break
