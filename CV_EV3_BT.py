@@ -169,7 +169,8 @@ if hmm == 'n':
             n10v=0
             n11v=0
             n12v=0 
-            if len(contours) > 1000:
+            if len(contours) !=0:
+                print('len ',len(contours))
                 contours=sorted(contours,key=cv.contourArea,reverse=True)
                 cv.drawContours(frame,contours,0,(255,0,255),3)
                 #cv.imshow('contours',frame)
@@ -184,17 +185,17 @@ if hmm == 'n':
                 #cv.imshow('n',n1)
                 #cv.imshow('n2',n7)
                 roImg=cv.cvtColor(roImg,cv.COLOR_BGR2GRAY)
-                #print(' ')
-                #print(' ')
-                #print(cn)
+                print(' ')
+                print(' ')
+                print(cn)
                 if roImg.any() !=0:
                     for o in range(1,13):
-                        #print(o)
+                        print(o)
                         template=cv.cvtColor(cv.imread(str(o)+'.png'),cv.COLOR_BGR2GRAY)
                         resu=cv.matchTemplate(roImg,template,cv.TM_CCOEFF_NORMED)
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
-                        #print(minv,maxv,minl,maxl)
-                        #print(' ')
+                        print(minv,maxv,minl,maxl)
+                        print(' ')
                         if o==1:
                             if minv>0.27:
                                 print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
