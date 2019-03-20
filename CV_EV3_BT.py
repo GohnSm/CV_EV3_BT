@@ -169,7 +169,7 @@ if hmm == 'n':
             n10v=0
             n11v=0
             n12v=0 
-            if len(contours) != 0:
+            if len(contours) > 1000:
                 contours=sorted(contours,key=cv.contourArea,reverse=True)
                 cv.drawContours(frame,contours,0,(255,0,255),3)
                 #cv.imshow('contours',frame)
