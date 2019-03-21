@@ -7,6 +7,7 @@ import time
 #GPIO.setmode(GPIO.BCM)
 #GPIO.setup(4, GPIO.OUT)
 #hmm= 'n'
+reso=(128,128)
 hmm=input('Change settings? y/n ')
 while hmm == 'y':
     selcol=input('Select color (r=1/g=2/b=3/y=4) ')
@@ -192,7 +193,7 @@ if hmm == 'n':
                     for o in range(1,13):
                         print(o)
                         template=cv.cvtColor(cv.imread(str(o)+'.png'),cv.COLOR_BGR2GRAY)
-                        resu=cv.matchTemplate(roImg,template,(128,128),cv.TM_CCOEFF_NORMED)
+                        resu=cv.matchTemplate(roImg,template,reso,cv.TM_CCOEFF_NORMED)
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
                         print(minv,maxv,minl,maxl)
                         print(' ')
