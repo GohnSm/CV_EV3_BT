@@ -193,7 +193,7 @@ if hmm == 'n':
                     for o in range(1,13):
                         print(o)
                         template=cv.cvtColor(cv.imread(str(o)+'.png'),cv.COLOR_BGR2GRAY)
-                        resu=cv.matchTemplate(roImg,template,reso,cv.TM_CCOEFF_NORMED)
+                        resu=cv.matchTemplate(roImg,template,cv.TM_CCOEFF_NORMED,[128,128])
                         minv,maxv,minl,maxl=cv.minMaxLoc(resu)
                         print(minv,maxv,minl,maxl)
                         print(' ')
