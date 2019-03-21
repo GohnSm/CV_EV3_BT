@@ -324,7 +324,7 @@ if hmm == 'n':
                 gpio13.close
                 break
             elif n3v>3000:
-                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' 3')
                 gpio0=open('/sys/class/gpio/gpio'+cr+'/value','w')
                 gpio0.write('1')
                 gpio0.close
@@ -364,7 +364,7 @@ if hmm == 'n':
                 gpio13.close
                 break
             elif n4v>3000:
-                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' 4')
                 gpio0=open('/sys/class/gpio/gpio'+cr+'/value','w')
                 gpio0.write('1')
                 gpio0.close
@@ -398,7 +398,7 @@ if hmm == 'n':
                 gpio14.close
                 break
             elif n5v>3200:
-                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' 5')
                 gpio0=open('/sys/class/gpio/gpio'+cr+'/value','w')
                 gpio0.write('1')
                 gpio0.close
@@ -436,8 +436,9 @@ if hmm == 'n':
                 gpio14=open('/sys/class/gpio/gpio18/value','w')
                 gpio14.write('0')
                 gpio14.close
+                break
             elif n6v>3000:
-                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' 6')
                 gpio0=open('/sys/class/gpio/gpio'+cr+'/value','w')
                 gpio0.write('1')
                 gpio0.close
@@ -483,7 +484,7 @@ if hmm == 'n':
                 gpio15.close
                 break
             elif n7v>3200:
-                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' 7')
                 gpio0=open('/sys/class/gpio/gpio'+cr+'/value','w')
                 gpio0.write('1')
                 gpio0.close
@@ -511,7 +512,7 @@ if hmm == 'n':
                 gpio11.close
                 break
             elif n8v>3000:
-                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' 8')
                 gpio0=open('/sys/class/gpio/gpio'+cr+'/value','w')
                 gpio0.write('1')
                 gpio0.close
@@ -561,8 +562,9 @@ if hmm == 'n':
                 gpio15=open('/sys/class/gpio/gpio23/value','w')
                 gpio15.write('0')
                 gpio15.close
+                break
             elif n9v>3000:
-                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' ',int(o))
+                print('!!!!!!!!!!!!!!!!!!!!!!!    '+cn+' 9')
                 gpio0=open('/sys/class/gpio/gpio'+cr+'/value','w')
                 gpio0.write('1')
                 gpio0.close
