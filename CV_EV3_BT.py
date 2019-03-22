@@ -608,7 +608,7 @@ if hmm == 'n':
                 gpio14=open('/sys/class/gpio/gpio18/value','w')
                 gpio14.write('0')
                 gpio14.close
-                brake
+                break
             elif n10v>3000:
                 print('!!!   10 ',cn)
 
